@@ -9,6 +9,8 @@ const viewRouter = require('./routes/viewRoutes')
 app.use(express.static(path.join(__dirname, 'views')))
 app.use(cookieParser())
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/api/v1/users',userRouter)
 app.use('/', viewRouter)
 
