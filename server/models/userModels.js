@@ -17,6 +17,9 @@ const userSchema = new mongoose.Schema({
     cid: {
         type: String,
         required: [true, 'Please enter your CID No.']
+    }, phone: {
+        type: String,
+        required: [true,'Please enter your phone number']
     },
     photo: {
         type: String,
